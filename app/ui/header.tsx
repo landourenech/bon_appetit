@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { ArrowRightIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { UserPlusIcon, Bars3Icon, XMarkIcon, UserIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -33,11 +33,12 @@ export function Header() {
             <li className="hover:text-red-200 cursor-pointer">À propos</li>
             <li className="hover:text-red-200 cursor-pointer">Contact</li>
           </ul>
+        
           <Link
             href="/login"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
-            <span>Connexion</span> <ArrowRightIcon className="w-5 md:w-6" />
+            <UserIcon className="w-5 md:w-6" />
           </Link>
         </nav>
 
@@ -55,17 +56,24 @@ export function Header() {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-md p-4 flex flex-col space-y-4 md:hidden">
+          <div className="absolute top-[100px] left-0 w-full bg-red-500 shadow-md p-4 flex flex-col space-y-4 md:hidden">
             <ul className="flex flex-col items-center gap-4">
               <li className="hover:text-red-200 cursor-pointer">Accueil</li>
               <li className="hover:text-red-200 cursor-pointer">À propos</li>
               <li className="hover:text-red-200 cursor-pointer">Contact</li>
             </ul>
+
+            <Link
+              href="/singin"
+              className="flex justify-center items-center gap-3 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400"
+            >
+              <span>Inscription</span> <UserPlusIcon className="w-5" />
+            </Link>
             <Link
               href="/login"
               className="flex justify-center items-center gap-3 rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400"
             >
-              <span>Connexion</span> <ArrowRightIcon className="w-5" />
+              <span>Connexion</span> <UserIcon className="w-5" />
             </Link>
           </div>
         )}
