@@ -14,7 +14,7 @@ export default function LoginPage() {
           alt="image de connexion"
         />
     </div>
-    <div className='hidden h-full md:flex md:w-1/2 justify-center items-centerhidden h-full md:flex md:w-1/2 justify-center items-center'> 
+    <div className='hidden h-full md:flex md:w-1/2 justify-center items-centerhidden'> 
     <Image
           src="/imageconnexion.png"
             className="w-full "
