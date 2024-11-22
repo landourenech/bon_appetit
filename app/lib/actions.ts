@@ -18,7 +18,7 @@ const FormSchema = z.object({
     .number()
     .gt(0, { message: 'Please enter an amount greater than $0.' }),
   status: z.enum(['pending', 'paid'], {
-    invalid_type_error: 'Please select an invoice status.',
+    invalid_type_error: 'Please select an promo status.',
   }),
   date: z.string(),
 });
@@ -34,7 +34,7 @@ export type State = {
  
 const CreateInvoice = FormSchema.omit({ id: true , date: true });
  
-export async function createInvoice(prevState: State, formData: FormData) {
+export async function createPromo(prevState: State, formData: FormData) {
   // Validate form using Zod
   const validatedFields = CreateInvoice.safeParse({
     customerId: formData.get('customerId'),
@@ -58,7 +58,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
   // Insert data into the database
   try {
     await sql`
-      INSERT INTO invoices (customer_id, amount, status, date)
+      INSERT INTO promos (customer_id, amount, status, date)
       VALUES (${customerId}, ${amountInCents}, ${status}, ${date})
     `;
   } catch (error) {
@@ -68,9 +68,9 @@ export async function createInvoice(prevState: State, formData: FormData) {
     };
   }
  
-  // Revalidate the cache for the invoices page and redirect the user.
-  revalidatePath('/dashboard/invoices');
-  redirect('/dashboard/invoices');
+  // Revalidate the cache for the promos page and redirect the user.
+  revalidatePath('/dashboard/promos');
+  redirect('/dashboard/promos');
 }
 
   // Use Zod to update the expected types
@@ -101,7 +101,7 @@ export async function updateInvoice(
  
   try {
     await sql`
-      UPDATE invoices
+      UPDATE promos
       SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
       WHERE id = ${id}
     `;
@@ -109,20 +109,20 @@ export async function updateInvoice(
     return { message: 'Database Error: Failed to Update Invoice.' };
   }
  
-  revalidatePath('/dashboard/invoices');
-  redirect('/dashboard/invoices');
+  revalidatePath('/dashboard/promos');
+  redirect('/dashboard/promos');
 }
 
-export async function deleteInvoice(id: string) {
-  throw new Error ('Failed to delete Invoice')
+export async function deletePromos(id: string) {
+  throw new Error ('Failed to delete Promos')
  try {
 
- await sql`DELETE FROM invoices WHERE id = ${id}`;
+ await sql`DELETE FROM promos WHERE id = ${id}`;
  }
  catch (error){
-  return {message:'Database Error: Failed to Delete invoice '}
+  return {message:'Database Error: Failed to Delete Promos '}
  }
-  revalidatePath('/dashboard/invoices');
+  revalidatePath('/dashboard/promos');
 }
 
 

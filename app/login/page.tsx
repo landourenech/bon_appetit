@@ -1,16 +1,30 @@
-import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
- 
+ import Image from 'next/image'
+
+
 export default function LoginPage() {
   return (
-    <main className="flex items-center justify-center md:h-screen">
-      <div className="relative mx-auto flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
-        <div className="flex h-20 w-full items-end rounded-lg bg-blue-500 p-3 md:h-36">
-          <div className="w-32 text-white md:w-36">
-            <AcmeLogo />
-          </div>
-        </div>
-        <LoginForm />
+    <main className="relative flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100">
+      <div className="absolute inset-0 md:hidden">
+        <Image
+          src="/imageconnexion.png"
+            className="w-full "
+            layout="fill"
+          objectFit="cover"
+          alt="image de connexion"
+        />
+    </div>
+    <div className='hidden h-full md:flex md:w-1/2 justify-center items-centerhidden h-full md:flex md:w-1/2 justify-center items-center'> 
+    <Image
+          src="/imageconnexion.png"
+            className="w-full "
+            width={500}
+            height={500}
+          alt="image de connexion"
+        />
+    </div>
+    <div className="relative  mx-auto flex w-full max-w-[400px] flex-col md:-mt-32">
+      <LoginForm />
       </div>
     </main>
   );

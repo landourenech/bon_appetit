@@ -6,7 +6,7 @@ export default async function Page() {
   return (
     <main>
       <h1 >
-        Dashboard
+        users teachers
       </h1>
       
     </main>

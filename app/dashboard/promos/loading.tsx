@@ -1,4 +1,4 @@
-
+import {PromosTableSkeleton} from '@/app/ui/skeletons'
 
 
 export default async function Page() {
@@ -6,9 +6,10 @@ export default async function Page() {
   return (
     <main>
       <h1 >
-        Dashboard
+       promos
       </h1>
       
+      <PromosTableSkeleton />
     </main>
   );
 }
