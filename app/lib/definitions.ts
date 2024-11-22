@@ -25,5 +25,5 @@ export type Student ={
 export type Social ={
   id:string;
   name: string;
-  link:;
+  link:string;
 }
