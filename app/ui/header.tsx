@@ -14,7 +14,7 @@ export function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between p-4 bg-white shadow-md">
+      <header className="flex items-center justify-between p-4 bg-white shadow-md sticky top-0">
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -28,7 +28,7 @@ export function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-6">
-          <ul className="flex gap-4">
+          <ul className="flex gap-20">
             <li className="hover:text-red-200 cursor-pointer">Accueil</li>
             <li className="hover:text-red-200 cursor-pointer">À propos</li>
             <li className="hover:text-red-200 cursor-pointer">Contact</li>
