@@ -6,7 +6,7 @@ export default function page ()  {
   return (
     <>
       <div className='flex gap-9 justify-around lg:flex-row md:flex-row  flex-col '>
-      <Link href="/"><ArrowLeftCircleIcon className='w-5 h-16 mt-16 lg:block hidden'/></Link>
+      <Link href="/"><ArrowLeftCircleIcon className='w-5 h-16 mt-5 lg:block hidden'/></Link>
      <Link href="/"><button className='w-28 bg-sky-800 p-2 border-sky-800 lg:hidden block m-3 rounded-xl text-white '>Retour</button></Link> 
        <Image className='lg:w-[600px] lg:h-[600px] '  src="/xpicture3.jpg.pagespeed.ic_.sOoD_3xCgZ-768x652 1.png" alt="" width={1000} height={1000}/>
        <div className='mt-8 items-center ml-6'>
@@ -41,7 +41,7 @@ export default function page ()  {
       </div>
 
       <div className='flex justify-center lg:text-3xl font-bold '><h1>Préparation du Thieboudienne (Riz gras)</h1></div>
-      <div className='flex justify-center m-32 gap-10 lg:flex-row md:flex-row flex-col w-48'>
+      <div className='flex lg:justify-center m-32 gap-10 lg:flex-row md:flex-row flex-col '>
         <p><span className='font-bold'>Étape 1:</span> Préparer la farce pour le poisson:
 Mélanger le persil, la moitié de l’ail, un peu de piment, ajouter du sel et 1/2 d’une Maggi. Vous pouvez piller dans un mortier ou utiliser un robot culinaire.
 Ensuite, insérez le mélange dans les morceaux de poisson et faites frire.</p> 

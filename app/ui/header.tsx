@@ -14,15 +14,15 @@ export function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between p-4 bg-white shadow-md sticky top-0">
+      <header className="flex items-center justify-between p-4 lg:bg-transparent/55 shadow-md lg:sticky text-white lg:top-0">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center bg-white ">
           <Image
-            src="/path-to-logo.png" // Remplacez par le chemin de votre logo
+            src="/4629a06112bb6ed5d47e800331367fa0.jpg" // Remplacez par le chemin de votre logo
             alt="logo image"
             width={50}
             height={50}
-            className="max-md:block md:hidden"
+            className="max-md:block md:hidden rounded-full block"
           />
         </div>
 

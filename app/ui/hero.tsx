@@ -16,7 +16,7 @@ export function Hero() {
     
         <div className="flex  max-md:grid-cols-1 gap-80 justify-center h-[100vh] items-center">
           <div className="flex flex-col -20 gap-14">
-            <h1 className="text-red-600 flex justify-center">Bon appétit</h1>
+            <h1 className="text-red-600 flex justify-center text-xl">Bon appétit</h1>
             <p className="lg:text-3xl md:text-3xl text-xl  text-white text-center font-extrabold lg:w-[640px] md:w-[540px] w-[340px]">
               Les meilleures recettes faciles à faire avec notre
               communauté
