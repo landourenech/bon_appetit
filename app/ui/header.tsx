@@ -14,21 +14,21 @@ export function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between p-4 bg-white shadow-md">
+      <header className="flex items-center justify-between p-4 lg:bg-transparent/55 shadow-md lg:sticky text-white lg:top-0">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center bg-white ">
           <Image
-            src="/path-to-logo.png" // Remplacez par le chemin de votre logo
+            src="/4629a06112bb6ed5d47e800331367fa0.jpg" // Remplacez par le chemin de votre logo
             alt="logo image"
             width={50}
             height={50}
-            className="max-md:block md:hidden"
+            className="max-md:block md:hidden rounded-full block"
           />
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-6">
-          <ul className="flex gap-4">
+          <ul className="flex gap-20">
             <li className="hover:text-red-200 cursor-pointer">Accueil</li>
             <li className="hover:text-red-200 cursor-pointer">À propos</li>
             <li className="hover:text-red-200 cursor-pointer">Contact</li>
